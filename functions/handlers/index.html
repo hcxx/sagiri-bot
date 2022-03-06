@@ -383,6 +383,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#wordle" class="md-nav__link">
+    Wordle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     缩写预测
   </a>
@@ -849,6 +856,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#wordle" class="md-nav__link">
+    Wordle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     缩写预测
   </a>
@@ -1221,7 +1235,7 @@
 <p>模块位置：<code>sagiri_bot.handler.handlers.genshin_resource_points</code></p>
 <p>使用方法：</p>
 <ul>
-<li>在群中发送 <code>{resource_name} 在哪里? | 哪里?有 {resource_name}</code> 即可查看资源地图</li>
+<li>在群中发送 <code>原神{resource_name} 在哪里? | 哪里?有 {resource_name}</code> 即可查看资源地图</li>
 <li>在群中发送 <code>原神资源列表</code> 即可查看资源列表</li>
 </ul>
 <p>来源: <a href="https://github.com/H-K-Y/Genshin_Impact_bot">Genshin_Impact_bot</a></p>
@@ -1258,6 +1272,35 @@
 <p>模块位置：<code>sagiri_bot.handler.handlers.super_resolution</code></p>
 <p>使用方法：在群中发送 <code>/超分 图片</code> 即可</p>
 <p>注意：若需要使用本插件，请运行 <code>pip install realesrgan basicsr</code>，若不安装则插件默认不启用</p>
+<blockquote>
+<h2 id="wordle">Wordle</h2>
+</blockquote>
+<p>Wordle文字游戏</p>
+<p>答案为指定长度单词，发送对应长度单词即可。灰色块代表此单词中没有此字母，黄色块代表此单词中有此字母，但该字母所处位置不对，绿色块代表此单词中有此字母且位置正确，猜出单词或用光次数则游戏结束。</p>
+<p>模块位置：<code>sagiri_bot.handler.handlers.wordle</code></p>
+<p>使用方法：</p>
+<ul>
+<li>
+<p>发起游戏：/wordle -l=5 -d=SAT，其中-l/-length为单词长度，-d/-dic为指定词典，默认为5和CET4</p>
+</li>
+<li>
+<p>中途放弃：/wordle -g 或 /wordle -giveup</p>
+</li>
+<li>
+<p>查看数据统计：/wordle -s 或 /wordle -statistic</p>
+</li>
+</ul>
+<p>扩展：可自行添加词库，将词库json放入 <code>sagiri_bot.handler.handlers.wordle.words</code> 文件夹即可，json格式如下</p>
+<pre><code class="language-json">{
+  &quot;word&quot;: {
+    &quot;中译（可选）&quot;: &quot;单词&quot;,
+    &quot;英译（可选）&quot;: &quot;word&quot;,
+    &quot;各种自定义解释（可选）&quot;: &quot;自定义解释&quot;,
+    ...
+  },
+  ...
+}
+</code></pre>
 <blockquote>
 <h2 id="_6">缩写预测</h2>
 </blockquote>
