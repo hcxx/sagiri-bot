@@ -348,6 +348,54 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          二次开发
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="二次开发" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          二次开发
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/control/" class="md-nav__link">
+        内置控制器
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     <li class="md-nav__item">
       <a href="../manage/" class="md-nav__link">
         管理
@@ -434,6 +482,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#failed-cant-locate-revision-identified-by-xxx" class="md-nav__link">
+    FAILED: Can't locate revision identified by 'xxx'
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#adapter-down" class="md-nav__link">
     adapter down
   </a>
@@ -511,6 +566,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#failed-cant-locate-revision-identified-by-xxx" class="md-nav__link">
+    FAILED: Can't locate revision identified by 'xxx'
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#adapter-down" class="md-nav__link">
     adapter down
   </a>
@@ -566,6 +628,24 @@
 <ul>
 <li>使用 <code>anaconda</code> 创建虚拟环境，安装好依赖后在虚拟环境中启动（推荐）</li>
 <li>将 <code>python/Scripts</code> 目录加入环境变量</li>
+</ul>
+<blockquote>
+<h2 id="failed-cant-locate-revision-identified-by-xxx">FAILED: Can't locate revision identified by 'xxx'</h2>
+<p>若出现以下信息：</p>
+</blockquote>
+<pre><code class="language-text">INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+ERROR [alembic.util.messaging] Can't locate revision identified by 'xxx'
+  FAILED: Can't locate revision identified by 'xxx'
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+ERROR [alembic.util.messaging] Can't locate revision identified by 'xxx'
+  FAILED: Can't locate revision identified by 'xxx'
+</code></pre>
+<ul>
+<li>打开bot目录下的 <code>alembic</code> 文件夹，将其中 <code>versions</code> 清空（保留空文件夹）</li>
+<li>打开数据库，删除名为 <code>alembic_version</code> 的数据表</li>
+<li>重启机器人</li>
 </ul>
 <blockquote>
 <h2 id="adapter-down">adapter down</h2>
