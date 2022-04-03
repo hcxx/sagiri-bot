@@ -1124,7 +1124,7 @@ url:http://xxx.xxx.xxx
 <li>在电脑上打开浏览器，输入程序提供的url，应当会出现滑动认证的画面，此时先不要进行认证</li>
 <li>单击 <code>F12</code> 键，会出现一个 <code>DevTool</code>，找到上方选项卡，点击 <code>Network</code> 选项，再点击下方的 <code>Fetch/XHR</code> 选项</li>
 <li>完成滑动验证，此时在 <code>DevTool</code> 界面中应会出现新的请求，找到其中名为 <code>cap_union_new_verify</code> 选项卡，点击其中的 <code>Preview</code> 选项卡，在其中找到 <code>ticket</code> 的值填入 <code>mcl</code> 并回车</li>
-<li>gif演示：<img alt="浏览器获取ticket演示" src="/asserts/txcaptcha.gif" /></li>
+<li>gif演示：<img alt="浏览器获取ticket演示" src="https://sagiri-kawaii.github.io/sagiri-bot/asserts/txcaptcha.gif" /></li>
 </ul>
 </li>
 </ul>
@@ -1140,7 +1140,7 @@ url:http://xxx.xxx.xxx
 <li>输入 <code>conda --version</code>，若输出如 <code>conda 4.8.4</code> 的消息就证明配置成功</li>
 </ul>
 </li>
-<li>创建虚拟环境（可选但推荐）<a id="anaconda_virtual_env"></a><ul>
+<li>创建虚拟环境（可选但推荐）<ul>
 <li>使用 win + r 组合键，打开运行窗口，输入 <code>cmd</code> 并回车，打开命令提示符</li>
 <li>输入 <code>conda create -n your_env_name python=3.8</code>，其中 <code>your_env_name</code> 为你要创建的环境名，可自定义，python版本 &gt;= 3.8 即可，可自行安装其他版本</li>
 <li>等待程序询问是否安装，直接回车即可</li>
@@ -1168,7 +1168,7 @@ url:http://xxx.xxx.xxx
 <h3 id="anaconda_1">使用 anaconda</h3>
 <ul>
 <li>若你在安装python时使用的是安装 Anaconda 的方法并且 <code>自带python版本&gt;=3.8</code> 或已经配置好虚拟环境可观看此项</li>
-<li>在终端里输入 <code>conda activate your_env_name</code> 进入虚拟环境（Anaconda自带版本 &gt;= 3.8可忽略此步骤，但推荐使用虚拟环境以防止出现依赖混乱冲突的情况，若你还没有创建虚拟环境并且自带python版本不符合条件，请查看上方<a href="#anaconda_virtual_env">创建虚拟环境</a>）</li>
+<li>在终端里输入 <code>conda activate your_env_name</code> 进入虚拟环境（Anaconda自带版本 &gt;= 3.8可忽略此步骤，但推荐使用虚拟环境以防止出现依赖混乱冲突的情况，若你还没有创建虚拟环境并且自带python版本不符合条件，请查看上方创建虚拟环境）</li>
 <li>激活成功后进入bot所在目录，运行 <code>pip install -r requirements.txt</code> 即可</li>
 </ul>
 <h3 id="poetry">使用 poetry</h3>
