@@ -240,168 +240,58 @@
 
   
   
+  
     
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+      
+      
+        <label class="md-nav__link" for="__nav_2">
           项目部署
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        项目部署
+      <nav class="md-nav" aria-label="项目部署" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          项目部署
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="windows/" class="md-nav__link">
+        Windows
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+            
+          
+            
+              
   
   
   
-    
+    <li class="md-nav__item">
+      <a href="linux/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#java-python" class="md-nav__link">
-    安装java &amp; python
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anaconda" class="md-nav__link">
-    安装anaconda（推荐）
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mirai" class="md-nav__link">
-    安装mirai
-  </a>
-  
-    <nav class="md-nav" aria-label="安装mirai">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mirai-console-loadermcl" class="md-nav__link">
-    使用 mirai-console-loader(mcl) 进行安装（推荐）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    自行安装
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mirai-api-http-v2" class="md-nav__link">
-    安装 mirai-api-http-v2
-  </a>
-  
-    <nav class="md-nav" aria-label="安装 mirai-api-http-v2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mirai-console-loadermcl_1" class="md-nav__link">
-    通过 mirai-console-loader(mcl) 进行安装（推荐）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    自行安装
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mirai-api-http-v2_1" class="md-nav__link">
-    配置 mirai-api-http-v2
-  </a>
-  
-    <nav class="md-nav" aria-label="配置 mirai-api-http-v2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mirai-console-loadermcl_2" class="md-nav__link">
-    使用 mirai-console-loader(mcl) 配置
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    自行配置
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    配置python环境
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    配置config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alembic" class="md-nav__link">
-    配置 alembic
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    启动机器人
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -532,6 +422,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../development/start/" class="md-nav__link">
+        开始开发
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../development/control/" class="md-nav__link">
         内置控制器
       </a>
@@ -655,8 +559,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#mcl-installer" class="md-nav__link">
+    使用 mcl-installer 进行安装（推荐）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#mirai-console-loadermcl" class="md-nav__link">
-    使用 mirai-console-loader(mcl) 进行安装（推荐）
+    使用 mirai-console-loader(mcl) 进行安装
   </a>
   
 </li>
@@ -728,6 +639,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#qq" class="md-nav__link">
+    登录QQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#python" class="md-nav__link">
     配置python环境
   </a>
@@ -778,7 +696,47 @@
 <p>请注意其中 <code>python版本 &gt;= 3.8</code></p>
 <h2 id="anaconda">安装anaconda（推荐）</h2>
 <h2 id="mirai">安装<a href="https://github.com/mamoe/mirai">mirai</a></h2>
-<h3 id="mirai-console-loadermcl">使用 <a href="https://github.com/iTXTech/mirai-console-loader">mirai-console-loader(mcl)</a> 进行安装（推荐）</h3>
+<h3 id="mcl-installer">使用 <a href="https://github.com/iTXTech/mcl-installer">mcl-installer</a> 进行安装（推荐）</h3>
+<ul>
+<li>
+<p>从 <a href="https://github.com/iTXTech/mcl-installer/releases/latest">mcl-installer release</a> 下载适合 <strong>你电脑架构</strong> 的版本</p>
+</li>
+<li>
+<p>下载完成后，打开终端，<strong>前往下载文件所在文件夹</strong>，输入 <code>./mcl-installer</code>，你应当见到如下输出：</p>
+</li>
+</ul>
+<pre><code class="language-text">iTXTech MCL Installer 1.0.3 [OS: windows]
+Licensed under GNU AGPLv3.
+https://github.com/iTXTech/mcl-installer
+
+iTXTech MCL and Java will be downloaded to &quot;F:\PythonProjects\mah-pure-inst&quot;
+
+Checking existing Java installation.
+...
+Would you like to install Java? (Y/N, default: Y)
+</code></pre>
+<p>一路回车即可（也可以按照自己情况进行修改）</p>
+<ul>
+<li>随后运行 <code>./mcl</code>，你应当见到如下输出：</li>
+</ul>
+<pre><code class="language-text">[INFO] Verifying &quot;net.mamoe:mirai-console&quot; v
+[ERROR] &quot;net.mamoe:mirai-console&quot; is corrupted.
+Downloading ......
+xxxx-xx-xx xx:xx:xx I/main: Starting mirai-console...
+......
+xxxx-xx-xx xx:xx:xx I/main: mirai-console started successfully.
+
+&gt;
+</code></pre>
+<ul>
+<li>
+<p>此时输入 <code>/autoLogin add</code> &lt;你的QQ号&gt; &lt;你的QQ密码&gt; 并回车，应该会显示 已成功添加 '&lt;你的QQ号&gt;'</p>
+</li>
+<li>
+<p>退出 <code>mirai-console</code></p>
+</li>
+</ul>
+<h3 id="mirai-console-loadermcl">使用 <a href="https://github.com/iTXTech/mirai-console-loader">mirai-console-loader(mcl)</a> 进行安装</h3>
 <ul>
 <li>打开mcl的 <a href="https://github.com/iTXTech/mirai-console-loader/releases">release</a> 页面，点击 <code>mcl-x.x.x.zip</code> 下载最新版本</li>
 <li><code>Windows系统</code> 在下载后解压运行 <code>mcl.cmd</code></li>
@@ -828,6 +786,31 @@ adapterSettings:
 </code></pre>
 <h3 id="_4">自行配置</h3>
 <p>请自行查看 <a href="https://github.com/project-mirai/mirai-api-http">mirai-api-http</a></p>
+<h2 id="qq">登录QQ</h2>
+<p>执行 <code>./mcl</code> 启动 <code>mirai-console</code></p>
+<p>如果直接显示 <code>Event: BotOnlineEvent(bot=Bot(&lt;你的QQ号&gt;))</code>，并有收到新消息，那么恭喜你，你已经完成了 <code>mirai</code> 方面的配置了</p>
+<p>若显示如下输出或出现有如下内容的弹窗：</p>
+<pre><code class="language-text">需要滑动验证码，完成后请输入ticket
+url:http://xxx.xxx.xxx
+</code></pre>
+<ul>
+<li>
+<p>有弹窗，并且使用的是 <code>Android</code> 系统手机（或使用电脑模拟器）</p>
+<ul>
+<li>点击 <code>Open with TxCaptchaHelper</code>，下载 <a href="https://maupdate.rainchan.win/txcaptcha.apk">TxCaptchaHelper</a> 并安装</li>
+<li>输入弹窗中的4位请求码并完成滑动验证，随后在电脑端点击确定</li>
+</ul>
+</li>
+<li>
+<p>没弹窗（如 Linux NoGUI 用户）或者使用的 <code>IOS</code> 系统手机/其他不能运行 <code>apk</code> 程序系统的手机</p>
+<ul>
+<li>在电脑上打开浏览器，输入程序提供的url，应当会出现滑动认证的画面，此时先不要进行认证</li>
+<li>单击 <code>F12</code> 键，会出现一个 <code>DevTool</code>，找到上方选项卡，点击 <code>Network</code> 选项，再点击下方的 <code>Fetch/XHR</code> 选项</li>
+<li>完成滑动验证，此时在 <code>DevTool</code> 界面中应会出现新的请求，找到其中名为 <code>cap_union_new_verify</code> 选项卡，点击其中的 <code>Preview</code> 选项卡，在其中找到 <code>ticket</code> 的值填入 <code>mcl</code> 并回车</li>
+<li>gif演示：<img alt="浏览器获取ticket演示" src="../asserts/txcaptcha.gif" /></li>
+</ul>
+</li>
+</ul>
 <h2 id="python">配置python环境</h2>
 <p><code>pip install -r requirements.txt</code></p>
 <h2 id="config">配置config</h2>
@@ -933,41 +916,6 @@ Saya version: 0.0.13
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="页脚">
-      
-        
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="上一页: 前言" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                上一页
-              </span>
-              前言
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../configuration/" class="md-footer__link md-footer__link--next" aria-label="下一页: 配置文件" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              配置文件
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

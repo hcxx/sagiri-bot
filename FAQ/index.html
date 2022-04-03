@@ -241,10 +241,57 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          项目部署
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="项目部署" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          项目部署
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../deployment/" class="md-nav__link">
-        项目部署
+      <a href="../deployment/windows/" class="md-nav__link">
+        Windows
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/linux/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -368,6 +415,20 @@
           二次开发
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/start/" class="md-nav__link">
+        开始开发
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -626,6 +687,7 @@
 或批处理文件。
 </code></pre>
 <ul>
+<li>先检查 <code>alembic</code> 是否安装成功，可使用 <code>pip list</code> 命令查看</li>
 <li>使用 <code>anaconda</code> 创建虚拟环境，安装好依赖后在虚拟环境中启动（推荐）</li>
 <li>将 <code>python/Scripts</code> 目录加入环境变量</li>
 </ul>
@@ -662,6 +724,8 @@ ERROR [alembic.util.messaging] Can't locate revision identified by 'xxx'
 <li>查看 <code>mirai-api-http(mah)</code> 版本是否为 <code>2.x</code>（仅支持 <code>2.x</code> ）</li>
 <li>查看 <code>mirai-api-http(mah)</code> 是否配置正确，详细配置请看 <a href="https://sagiri-kawaii.github.io/sagiri-bot/deployment/#mirai-api-http-v2_1">配置 mirai-api-http-v2</a></li>
 <li>查看 <code>config.yaml</code> 中 <code>mirai_host</code> 项是否正确配置并与 <code>mah</code> 中配置相同</li>
+<li>查看是否在 <code>mirai-concole-loader(mcl)</code> 中登录了帐号</li>
+<li>若在 <code>mirai-concole-loader(mcl)</code> 中出现类似 <code>W/net.mamoe.mirai-api-http: USING INITIAL KEY, please edit the key</code> 的信息，请更换新的 <code>verifyKey</code> 后重启尝试</li>
 </ol>
 
               
