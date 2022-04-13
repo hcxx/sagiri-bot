@@ -848,23 +848,23 @@
 <p>关于 <code>Depend</code> 依赖注入，请查看 <a href="https://graia.readthedocs.io/advance/broadcast/depend/">Ariadne文档</a></p>
 </li>
 <li>
-<p>broadcast:</p>
+<p>broadcast:
+<div class="highlight"><pre><span></span><code><span class="nd">@broadcast</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="n">GroupMessage</span><span class="p">,</span> <span class="n">decorators</span><span class="o">=</span><span class="p">[</span><span class="n">Class</span><span class="o">.</span><span class="n">func</span><span class="p">()])</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> <span class="o">...</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>saya:
+<div class="highlight"><pre><span></span><code><span class="nd">@channel</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
+    <span class="n">ListenerSchema</span><span class="p">(</span>
+        <span class="n">listening_events</span><span class="o">=</span><span class="p">[</span><span class="n">GroupMessage</span><span class="p">],</span> 
+        <span class="n">decorators</span><span class="o">=</span><span class="p">[</span><span class="n">Class</span><span class="o">.</span><span class="n">func</span><span class="p">()]</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> <span class="o">...</span>
+</code></pre></div></p>
 </li>
 </ul>
-<pre><code class="language-python">@broadcast.receiver(GroupMessage, decorators=[Class.func()])
-async def foo(...): ...
-</code></pre>
-<ul>
-<li>saya:</li>
-</ul>
-<pre><code class="language-python">@channel.use(
-    ListenerSchema(
-        listening_events=[GroupMessage], 
-        decorators=[Class.func()]
-    )
-)
-async def foo(...): ...
-</code></pre>
 <p>其中 <code>Class</code> 为管理类， <code>func</code> 为管理类调用函数，具体请查看类说明</p>
 <blockquote>
 <h2 id="permission">Permission</h2>
@@ -876,15 +876,15 @@ async def foo(...): ...
 <p>示例：<code>print(f"成员{member.name}权限为{Permission.get(group, member)}")</code></p>
 <h3 id="permissionrequire"><code>Permission.require</code></h3>
 <p>用途：判断成员权限是否满足某一等级</p>
-<p>示例：</p>
-<pre><code class="language-python">@channel.use(
-    ListenerSchema(
-        listening_events=[GroupMessage], 
-        decorators=[Permission.require(Permission.USER)]
-    )
-)
-async def foo(...): ...
-</code></pre>
+<p>示例：
+<div class="highlight"><pre><span></span><code><span class="nd">@channel</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
+    <span class="n">ListenerSchema</span><span class="p">(</span>
+        <span class="n">listening_events</span><span class="o">=</span><span class="p">[</span><span class="n">GroupMessage</span><span class="p">],</span> 
+        <span class="n">decorators</span><span class="o">=</span><span class="p">[</span><span class="n">Permission</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="n">Permission</span><span class="o">.</span><span class="n">USER</span><span class="p">)]</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> <span class="o">...</span>
+</code></pre></div></p>
 <h3 id="_3">内置等级</h3>
 <table>
 <thead>
@@ -929,12 +929,12 @@ async def foo(...): ...
 </table>
 <h3 id="_4">备注</h3>
 <p>对于某些在同一module中不同等级需要不同相应的情形，可以使用 <code>sagiri_bot.utils.user_permission_require</code></p>
-<p>使用方法：</p>
-<pre><code class="language-python">from sagiri_bot.utils import user_permission_require
+<p>使用方法：
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sagiri_bot.utils</span> <span class="kn">import</span> <span class="n">user_permission_require</span>
 
 
-await user_permission_require(group, member, level)
-</code></pre>
+<span class="k">await</span> <span class="n">user_permission_require</span><span class="p">(</span><span class="n">group</span><span class="p">,</span> <span class="n">member</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+</code></pre></div></p>
 <blockquote>
 <h2 id="frequencylimit">FrequencyLimit</h2>
 </blockquote>
@@ -942,15 +942,15 @@ await user_permission_require(group, member, level)
 <p>导入：<code>from sagiri_bot.control import FrequencyLimit</code></p>
 <h3 id="frequencylimitrequire"><code>FrequencyLimit.require</code></h3>
 <p>用途：限制功能调用频率</p>
-<p>示例：</p>
-<pre><code class="language-python">@channel.use(
-    ListenerSchema(
-        listening_events=[GroupMessage], 
-        decorators=[FrequencyLimit.require(&quot;function_name&quot;, weight=1, total_weight=10, override_level=Permission.MASTER)]
-    )
-)
-async def foo(...): ...
-</code></pre>
+<p>示例：
+<div class="highlight"><pre><span></span><code><span class="nd">@channel</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
+    <span class="n">ListenerSchema</span><span class="p">(</span>
+        <span class="n">listening_events</span><span class="o">=</span><span class="p">[</span><span class="n">GroupMessage</span><span class="p">],</span> 
+        <span class="n">decorators</span><span class="o">=</span><span class="p">[</span><span class="n">FrequencyLimit</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;function_name&quot;</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">total_weight</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">override_level</span><span class="o">=</span><span class="n">Permission</span><span class="o">.</span><span class="n">MASTER</span><span class="p">)]</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> <span class="o">...</span>
+</code></pre></div></p>
 <p>其中 <code>weight</code> 为调用一次增加的权重</p>
 <p><code>total_weight</code> 为10秒内本功能所接受的最大权重（若超过则会警告或拉黑一小时）</p>
 <p><code>override_level</code> 为不受此限制的最小权限等级（<code>Permission</code> 详见上文）</p>
@@ -959,15 +959,15 @@ async def foo(...): ...
 </blockquote>
 <p>机器人开关控制类</p>
 <p>用途：实现机器人全局关闭</p>
-<p>示例：</p>
-<pre><code class="language-python">@channel.use(
-    ListenerSchema(
-        listening_events=[GroupMessage], 
-        decorators=[Switch.enable(response_administrator=True)]
-    )
-)
-async def foo(...): ...
-</code></pre>
+<p>示例：
+<div class="highlight"><pre><span></span><code><span class="nd">@channel</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
+    <span class="n">ListenerSchema</span><span class="p">(</span>
+        <span class="n">listening_events</span><span class="o">=</span><span class="p">[</span><span class="n">GroupMessage</span><span class="p">],</span> 
+        <span class="n">decorators</span><span class="o">=</span><span class="p">[</span><span class="n">Switch</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="n">response_administrator</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> <span class="o">...</span>
+</code></pre></div></p>
 <p>其中 <code>response_administrator</code> 为在机器人关闭的情况下是否响应管理员</p>
 <p>注：此控制器功能已默认并入 <code>Function</code> 控制器，在使用 <code>Function</code> 控制器时不需再单独调用</p>
 <blockquote>
@@ -975,29 +975,29 @@ async def foo(...): ...
 </blockquote>
 <p>黑名单控制类</p>
 <p>用途：实现黑名单功能</p>
-<p>示例：</p>
-<pre><code class="language-python">@channel.use(
-    ListenerSchema(
-        listening_events=[GroupMessage], 
-        decorators=[BlackListControl.enable()]
-    )
-)
-async def foo(...): ...
-</code></pre>
+<p>示例：
+<div class="highlight"><pre><span></span><code><span class="nd">@channel</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
+    <span class="n">ListenerSchema</span><span class="p">(</span>
+        <span class="n">listening_events</span><span class="o">=</span><span class="p">[</span><span class="n">GroupMessage</span><span class="p">],</span> 
+        <span class="n">decorators</span><span class="o">=</span><span class="p">[</span><span class="n">BlackListControl</span><span class="o">.</span><span class="n">enable</span><span class="p">()]</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> <span class="o">...</span>
+</code></pre></div></p>
 <blockquote>
 <h2 id="interval">Interval</h2>
 </blockquote>
 <p>冷却管理类</p>
 <p>用途：实现功能调用间隔</p>
-<p>示例：</p>
-<pre><code class="language-python">@channel.use(
-    ListenerSchema(
-        listening_events=[GroupMessage], 
-        decorators=[Interval.require(suspend_time=10, max_exec=1, override_level=Permission.MASTER, slient=False)]
-    )
-)
-async def foo(...): ...
-</code></pre>
+<p>示例：
+<div class="highlight"><pre><span></span><code><span class="nd">@channel</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
+    <span class="n">ListenerSchema</span><span class="p">(</span>
+        <span class="n">listening_events</span><span class="o">=</span><span class="p">[</span><span class="n">GroupMessage</span><span class="p">],</span> 
+        <span class="n">decorators</span><span class="o">=</span><span class="p">[</span><span class="n">Interval</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="n">suspend_time</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_exec</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">override_level</span><span class="o">=</span><span class="n">Permission</span><span class="o">.</span><span class="n">MASTER</span><span class="p">,</span> <span class="n">slient</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> <span class="o">...</span>
+</code></pre></div></p>
 <p>其中 <code>suspend_time</code> 为冷却时间</p>
 <p><code>max_exec</code> 为在再次冷却前可使用次数</p>
 <p><code>override_level</code> 为可超越限制的最小等级（<code>Permission</code> 详见上文）</p>
@@ -1007,15 +1007,15 @@ async def foo(...): ...
 </blockquote>
 <p>功能调用记录类</p>
 <p>用途：实现功能调用计数</p>
-<p>示例：</p>
-<pre><code class="language-python">@channel.use(
-    ListenerSchema(
-        listening_events=[GroupMessage], 
-        decorators=[UserCalledCountControl.add(data_type=UserCalledCountControl.SETU, value=1)]
-    )
-)
-async def foo(...): ...
-</code></pre>
+<p>示例：
+<div class="highlight"><pre><span></span><code><span class="nd">@channel</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
+    <span class="n">ListenerSchema</span><span class="p">(</span>
+        <span class="n">listening_events</span><span class="o">=</span><span class="p">[</span><span class="n">GroupMessage</span><span class="p">],</span> 
+        <span class="n">decorators</span><span class="o">=</span><span class="p">[</span><span class="n">UserCalledCountControl</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">data_type</span><span class="o">=</span><span class="n">UserCalledCountControl</span><span class="o">.</span><span class="n">SETU</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> <span class="o">...</span>
+</code></pre></div></p>
 <h3 id="_5">内置类型</h3>
 <table>
 <thead>
@@ -1062,15 +1062,15 @@ async def foo(...): ...
 </blockquote>
 <p>单插件开关限制类</p>
 <p>用途：实现单插件开关（替代 <code>SayaManager</code>）</p>
-<p>示例：</p>
-<pre><code class="language-python">@channel.use(
-    ListenerSchema(
-        listening_events=[GroupMessage], 
-        decorators=[Function.require(name=channel.module, response_administrator=False, log=False, notice=False)]
-    )
-)
-async def foo(...): ...
-</code></pre>
+<p>示例：
+<div class="highlight"><pre><span></span><code><span class="nd">@channel</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
+    <span class="n">ListenerSchema</span><span class="p">(</span>
+        <span class="n">listening_events</span><span class="o">=</span><span class="p">[</span><span class="n">GroupMessage</span><span class="p">],</span> 
+        <span class="n">decorators</span><span class="o">=</span><span class="p">[</span><span class="n">Function</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">channel</span><span class="o">.</span><span class="n">module</span><span class="p">,</span> <span class="n">response_administrator</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">notice</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> <span class="o">...</span>
+</code></pre></div></p>
 <p>其中 <code>name</code> 为插件唯一标识，建议使用 <code>channel.module</code> 以防止插件重名的情况导致管理混乱</p>
 <p><code>response_administrator</code> 为在机器人关闭的情况下是否响应管理员</p>
 <p><code>log</code> 为收到消息时在控制台是否输出插件开关信息（不会计入log文件）</p>

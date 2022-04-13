@@ -451,6 +451,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#aminer" class="md-nav__link">
+    学术搜索（aminer）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     头像趣图
   </a>
@@ -986,6 +993,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#aminer" class="md-nav__link">
+    学术搜索（aminer）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     头像趣图
   </a>
@@ -1402,17 +1416,17 @@
 <p>查看数据统计：/wordle -s 或 /wordle -statistic</p>
 </li>
 </ul>
-<p>扩展：可自行添加词库，将词库json放入 <code>sagiri_bot.handler.handlers.wordle.words</code> 文件夹即可，json格式如下</p>
-<pre><code class="language-json">{
-  &quot;word&quot;: {
-    &quot;中译（可选）&quot;: &quot;单词&quot;,
-    &quot;英译（可选）&quot;: &quot;word&quot;,
-    &quot;各种自定义解释（可选）&quot;: &quot;自定义解释&quot;,
-    ...
-  },
-  ...
-}
-</code></pre>
+<p>扩展：可自行添加词库，将词库json放入 <code>sagiri_bot.handler.handlers.wordle.words</code> 文件夹即可，json格式如下
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;word&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;中译（可选）&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;单词&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;英译（可选）&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;word&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;各种自定义解释（可选）&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;自定义解释&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="err">...</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="err">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
 <blockquote>
 <h2 id="_6">缩写预测</h2>
 </blockquote>
@@ -1425,6 +1439,17 @@
 <p>一个普通话转抽象话的插件</p>
 <p>模块位置：<code>sagiri_bot.handler.handlers.abstract_message_transformer</code></p>
 <p>使用方法：在群中发送 <code>/抽象 文字</code> 即可</p>
+<blockquote>
+<h2 id="aminer">学术搜索（aminer）</h2>
+</blockquote>
+<p>一个可以搜学者、论文、专利的插件</p>
+<p>模块位置：<code>sagiri_bot.handler.handlers.aminer</code></p>
+<p>使用方法：</p>
+<ul>
+<li>在群中发送 <code>/aminer {keyword}</code> 即可搜索学者</li>
+<li>在群中发送 <code>/aminer -paper {keyword}</code> 即可搜索论文</li>
+<li>在群中发送 <code>/aminer -patent {keyword}</code> 即可搜索专利</li>
+</ul>
 <blockquote>
 <h2 id="_8">头像趣图</h2>
 </blockquote>
@@ -1530,6 +1555,7 @@
 <p>模块位置：<code>sagiri_bot.handler.handlers.emoji_mix</code></p>
 <p>使用方法：在群中发送 '{emoji1}+{emoji2}' 即可</p>
 <p>来源：<a href="https://github.com/MeetWq/nonebot-plugin-emojimix">nonebot-plugin-emojimix</a></p>
+<p>注意：仅适用于emoji表情，不适用于qq表情</p>
 <blockquote>
 <h2 id="_15">一个生成转发消息的插件</h2>
 </blockquote>

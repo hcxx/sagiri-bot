@@ -667,8 +667,8 @@
 <blockquote>
 <h2 id="playwright">PlayWright 报错</h2>
 </blockquote>
-<p>若出现如下报错：</p>
-<pre><code class="language-text">&lt;class 'playwright._impl._api_types.Error'&gt;: Executable doesn't exist at C:\Users\SAGIRI\AppData\Local\ms-playwright\chromium-956323\chrome-win\chrome.exe
+<p>若出现如下报错：
+<div class="highlight"><pre><span></span><code>&lt;class &#39;playwright._impl._api_types.Error&#39;&gt;: Executable doesn&#39;t exist at C:\Users\SAGIRI\AppData\Local\ms-playwright\chromium-956323\chrome-win\chrome.exe
 ╔═════════════════════════════════════════════════════════════════════════╗
 ║ Looks like Playwright Test or Playwright was just installed or updated. ║
 ║ Please run the following command to download new browsers:              ║
@@ -677,33 +677,31 @@
 ║                                                                         ║
 ║ &lt;3 Playwright Team                                                      ║
 ╚═════════════════════════════════════════════════════════════════════════╝
-</code></pre>
-<p>请打开终端执行 <code>playwright install</code></p>
+</code></pre></div>
+请打开终端执行 <code>playwright install</code></p>
 <blockquote>
 <h2 id="alembic">alembic 报错</h2>
 </blockquote>
-<p>若出现如下报错（Windows）：</p>
-<pre><code class="language-text">'alembic' 不是内部或外部命令，也不是可运行的程序
+<p>若出现如下报错（Windows）：
+<div class="highlight"><pre><span></span><code>&#39;alembic&#39; 不是内部或外部命令，也不是可运行的程序
 或批处理文件。
-</code></pre>
-<ul>
-<li>先检查 <code>alembic</code> 是否安装成功，可使用 <code>pip list</code> 命令查看</li>
-<li>使用 <code>anaconda</code> 创建虚拟环境，安装好依赖后在虚拟环境中启动（推荐）</li>
-<li>将 <code>python/Scripts</code> 目录加入环境变量</li>
-</ul>
+</code></pre></div>
+- 先检查 <code>alembic</code> 是否安装成功，可使用 <code>pip list</code> 命令查看
+- 使用 <code>anaconda</code> 创建虚拟环境，安装好依赖后在虚拟环境中启动（推荐）
+- 将 <code>python/Scripts</code> 目录加入环境变量</p>
 <blockquote>
 <h2 id="failed-cant-locate-revision-identified-by-xxx">FAILED: Can't locate revision identified by 'xxx'</h2>
-<p>若出现以下信息：</p>
-</blockquote>
-<pre><code class="language-text">INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+<p>若出现以下信息：
+<div class="highlight"><pre><span></span><code>INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
 INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
-ERROR [alembic.util.messaging] Can't locate revision identified by 'xxx'
-  FAILED: Can't locate revision identified by 'xxx'
+ERROR [alembic.util.messaging] Can&#39;t locate revision identified by &#39;xxx&#39;
+  FAILED: Can&#39;t locate revision identified by &#39;xxx&#39;
 INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
 INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
-ERROR [alembic.util.messaging] Can't locate revision identified by 'xxx'
-  FAILED: Can't locate revision identified by 'xxx'
-</code></pre>
+ERROR [alembic.util.messaging] Can&#39;t locate revision identified by &#39;xxx&#39;
+  FAILED: Can&#39;t locate revision identified by &#39;xxx&#39;
+</code></pre></div></p>
+</blockquote>
 <ul>
 <li>打开bot目录下的 <code>alembic</code> 文件夹，将其中 <code>versions</code> 清空（保留空文件夹）</li>
 <li>打开数据库，删除名为 <code>alembic_version</code> 的数据表</li>
@@ -712,12 +710,12 @@ ERROR [alembic.util.messaging] Can't locate revision identified by 'xxx'
 <blockquote>
 <h2 id="adapter-down">adapter down</h2>
 </blockquote>
-<p>若在运行时出现如下报错：</p>
-<pre><code class="language-text">2022-01-29 14:39:32.456 | WARNING  | graia.ariadne.app:daemon:1357 - daemon: adapter down, restart in 5.0s
+<p>若在运行时出现如下报错：
+<div class="highlight"><pre><span></span><code>2022-01-29 14:39:32.456 | WARNING  | graia.ariadne.app:daemon:1357 - daemon: adapter down, restart in 5.0s
 2022-01-29 14:39:37.456 | INFO     | graia.ariadne.app:daemon:1359 - daemon: restarting adapter
 2022-01-29 14:39:42.450 | CRITICAL | graia.ariadne.app:daemon:1343 - Timeout when connecting to mirai-api-http. Configuration problem?
-</code></pre>
-<p>请执行以下几步：</p>
+</code></pre></div>
+请执行以下几步：</p>
 <ol>
 <li>查看 <code>mirai-concole-loader(mcl)</code> 是否启动成功</li>
 <li>查看 <code>mirai-api-http(mah)</code> 是否启动成功</li>
