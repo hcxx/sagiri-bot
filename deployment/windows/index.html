@@ -1039,6 +1039,10 @@
 <p>极度不建议没有任何计算机基础的人安装或使用 SAGIRI-BOT!</p>
 <p>除非你懂得如何阅读文档、虚心提问并可以正常使用搜索引擎</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">关于部署出现问题</p>
+<p>当部署出现问题时，请检查是否按文档顺序进行，如出现问题可前往 <a href="https://sagiri-kawaii.github.io/sagiri-bot/FAQ/">FAQ</a> 寻找，如果没有找到原因可以前往 <a href="https://jq.qq.com/?_wv=1027&amp;k=9hfqo8AL">SAGIRI BOT官方交流群</a> 询问或在 github 提出 ISSUE</p>
+</div>
 <h2 id="java">安装java</h2>
 <h3 id="mcl-installer">使用 <a href="https://github.com/iTXTech/mcl-installer">mcl-installer</a> 进行安装（小白友好）</h3>
 <ul>
@@ -1097,8 +1101,24 @@ xxxx-xx-xx xx:xx:xx I/main: mirai-console started successfully.
 <li>按照 <code>mirai-api-http</code> 的 <code>README</code>，运行 <code>./mcl --update-package net.mamoe:mirai-api-http --channel stable-v2 --type plugin</code></li>
 <li>切换 <code>mirai-console-loader</code> 的 <code>repo</code>，运行 <code>./mcl --mrm-use forum</code></li>
 <li>启动 <code>mcl</code> 完成自动更新和启动</li>
-<li>若出现如 <code>[ERROR] The local file "net.mamoe:mirai-api-http" is still corrupted, plase check the network</code> 的报错，请使用下方手动安装方式</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">安装注意</p>
+<p>若出现如 <code>[ERROR] The local file "net.mamoe:mirai-api-http" is still corrupted, plase check the network</code> 的报错，请尝试使用以下任一方法：</p>
+<ul>
+<li>使用下方自行安装方法，</li>
+<li>尝试更改 <code>MCL</code> 的 <code>repo</code>，具体请查看 <a href="https://mirai.mamoe.net/topic/1084/mcl-%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95-2022-3-25">mcl-无法使用的相关解决方法</a> </li>
+<li>尝试更改 <code>MCL</code> 的 <code>config.json</code>，打开后更改 <code>package</code> 中 <code>id</code> 为 <code>net.mamoe:mirai-api-http</code> 的字典的 <code>version</code> 值为 <code>2.4.0</code>，并将下方 <code>versionLocked</code> 改为 <code>true</code></li>
+</ul>
+<p>当启动后出现如下方的消息才算安装并启动成功</p>
+<div class="highlight"><pre><span></span><code>2022-04-30 12:20:17 I/Mirai HTTP API: ********************************************************
+2022-04-30 12:20:17 I/http adapter: &gt;&gt;&gt; [http adapter] is listening at http://localhost:23456
+2022-04-30 12:20:17 I/ws adapter: &gt;&gt;&gt; [ws adapter] is listening at ws://localhost:23456
+2022-04-30 12:20:17 I/Mirai HTTP API: Http api server is running with verifyKey: 1234567890
+2022-04-30 12:20:17 I/Mirai HTTP API: adaptors: [http,ws]
+2022-04-30 12:20:17 I/Mirai HTTP API: ********************************************************
+</code></pre></div>
+</div>
 <h3 id="_4">自行安装</h3>
 <ul>
 <li>打开 <a href="https://github.com/project-mirai/mirai-api-http/releases/latest">mirai-http-api-release</a>，下载其中名为 <code>mirai-api-http-v2.x.x.mirai.jar</code> 的文件</li>

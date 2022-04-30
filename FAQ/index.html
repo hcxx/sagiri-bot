@@ -556,6 +556,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#yamldecodingexception" class="md-nav__link">
+    yamlDecodingException
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -640,6 +647,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#yamldecodingexception" class="md-nav__link">
+    yamlDecodingException
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -658,6 +672,14 @@
 
 
 <h1 id="_1">常见问题</h1>
+<div class="admonition note">
+<p class="admonition-title">阅读前注意</p>
+<p>如果未在此页面发现你想要的问题，可前往 <a href="https://jq.qq.com/?_wv=1027&amp;k=9hfqo8AL">SAGIRI BOT官方交流群</a> 或 github 提出 ISSUE，请附上程序报错信息。</p>
+<p>对于 <code>Java</code>（<code>mirai-console-loader</code>、<code>mirai-api-http</code> 相关）的报错，请务必截取到报错字段的开始部分</p>
+<p>对于 <code>Python</code>（<code>bot</code> 相关）的报错，请务必截取到报错字段的最后部分</p>
+<p>若你不知道报错中哪部分是真正有用的信息，请全部截取</p>
+<p>注意：若在QQ中询问问题时请不要直接将报错粘贴发送，请使用 <code>pastebin</code> 发送报错，或者发送截图</p>
+</div>
 <blockquote>
 <h2 id="mysql-postgresql">Mysql / PostgreSQL 相关</h2>
 </blockquote>
@@ -725,6 +747,13 @@ ERROR [alembic.util.messaging] Can&#39;t locate revision identified by &#39;xxx&
 <li>查看是否在 <code>mirai-concole-loader(mcl)</code> 中登录了帐号</li>
 <li>若在 <code>mirai-concole-loader(mcl)</code> 中出现类似 <code>W/net.mamoe.mirai-api-http: USING INITIAL KEY, please edit the key</code> 的信息，请更换新的 <code>verifyKey</code> 后重启尝试</li>
 </ol>
+<blockquote>
+<h2 id="yamldecodingexception">yamlDecodingException</h2>
+</blockquote>
+<p>若在运行时出现如下报错：
+<div class="highlight"><pre><span></span><code>2022-04-30 18:34:34 E/net.mamoe.mirai-api-http: net.mamoe.yamlkt.YamlDecodingException:There must be a COLON between class key and value but found null for &#39;setting&#39;
+</code></pre></div></p>
+<p>请尝试重新粘贴配置，或更换端口，可能是有不可见字符混入配置文件</p>
 
               
             </article>
