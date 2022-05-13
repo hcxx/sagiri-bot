@@ -563,6 +563,82 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    内存占用问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pip-valueerror-check_hostname-requires-server_hostname" class="md-nav__link">
+    pip: ValueError: check_hostname requires server_hostname
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exception-in-thread-defaultdispatcher-worker-2" class="md-nav__link">
+    Exception in thread "DefaultDispatcher-worker-2"...
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javalangnosuchmethoderror-void-kotlinxserializationinternalobjectserializer" class="md-nav__link">
+    java.lang.NoSuchMethodError: void kotlinx.serialization.internal.ObjectSerializer...
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javalangillegalstateexception-plugin-netmamoemirai-api-http-is-already-loaded-and-cannot-be-reloaded" class="md-nav__link">
+    java.lang.illegalStateException: plugin 'net.mamoe.mirai-api-http' is already loaded and cannot be reloaded
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-python-not-found" class="md-nav__link">
+    command "python" not found
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    下载速度问题
+  </a>
+  
+    <nav class="md-nav" aria-label="下载速度问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    pip
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    代理相关
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -650,6 +726,82 @@
         <li class="md-nav__item">
   <a href="#yamldecodingexception" class="md-nav__link">
     yamlDecodingException
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    内存占用问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pip-valueerror-check_hostname-requires-server_hostname" class="md-nav__link">
+    pip: ValueError: check_hostname requires server_hostname
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exception-in-thread-defaultdispatcher-worker-2" class="md-nav__link">
+    Exception in thread "DefaultDispatcher-worker-2"...
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javalangnosuchmethoderror-void-kotlinxserializationinternalobjectserializer" class="md-nav__link">
+    java.lang.NoSuchMethodError: void kotlinx.serialization.internal.ObjectSerializer...
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javalangillegalstateexception-plugin-netmamoemirai-api-http-is-already-loaded-and-cannot-be-reloaded" class="md-nav__link">
+    java.lang.illegalStateException: plugin 'net.mamoe.mirai-api-http' is already loaded and cannot be reloaded
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-python-not-found" class="md-nav__link">
+    command "python" not found
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    下载速度问题
+  </a>
+  
+    <nav class="md-nav" aria-label="下载速度问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    pip
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    代理相关
   </a>
   
 </li>
@@ -754,6 +906,57 @@ ERROR [alembic.util.messaging] Can&#39;t locate revision identified by &#39;xxx&
 <div class="highlight"><pre><span></span><code>2022-04-30 18:34:34 E/net.mamoe.mirai-api-http: net.mamoe.yamlkt.YamlDecodingException:There must be a COLON between class key and value but found null for &#39;setting&#39;
 </code></pre></div></p>
 <p>请尝试重新粘贴配置，或更换端口，可能是有不可见字符混入配置文件</p>
+<blockquote>
+<h2 id="_2">内存占用问题</h2>
+</blockquote>
+<p><code>SAGIRI-BOT</code> 需要至少 <code>1GB</code> 空闲内存以保证正常运行，若你的机器内存不足，可以选择删除 <code>sagiri_bot.handler.handlers.wordle</code>，代价是没有猜词功能，但可以减少 <code>400MB</code> 左右的内存消耗</p>
+<blockquote>
+<h2 id="pip-valueerror-check_hostname-requires-server_hostname">pip: ValueError: check_hostname requires server_hostname</h2>
+</blockquote>
+<p>关闭全局代理，重新执行命令</p>
+<blockquote>
+<h2 id="exception-in-thread-defaultdispatcher-worker-2">Exception in thread "DefaultDispatcher-worker-2"...</h2>
+</blockquote>
+<p>检查 <code>mirai-api-http</code> 版本，若为 <code>2.5.0+</code> 请降级为 <code>2.4.0</code></p>
+<blockquote>
+<h2 id="javalangnosuchmethoderror-void-kotlinxserializationinternalobjectserializer">java.lang.NoSuchMethodError: void kotlinx.serialization.internal.ObjectSerializer...</h2>
+</blockquote>
+<p>检查 <code>mirai-api-http</code> 版本，若为 <code>2.5.0+</code> 请降级为 <code>2.4.0</code></p>
+<p>详情请看 <a href="https://github.com/project-mirai/mirai-api-http/issues/568">mirai-api-http #568</a></p>
+<blockquote>
+<h2 id="javalangillegalstateexception-plugin-netmamoemirai-api-http-is-already-loaded-and-cannot-be-reloaded">java.lang.illegalStateException: plugin 'net.mamoe.mirai-api-http' is already loaded and cannot be reloaded</h2>
+</blockquote>
+<p>前往 <code>mirai-console-loader</code> 的 <code>plugin</code> 文件夹下删除 <code>2.5.0</code> 版本的 <code>mirai-api-http</code> （以 <code>2.5.0.jar</code> 结尾的）（当且仅当 <code>mirai-api-http-v2.5.0</code> 的序列化bug未解决且正在降级至 <code>2.4.0</code> 时此条生效）</p>
+<p>前往 <code>mirai-console-loader</code> 的 <code>plugin</code> 文件夹下删除重复的 <code>mirai-api-http</code> 插件 （常规状况）</p>
+<blockquote>
+<h2 id="command-python-not-found">command "python" not found</h2>
+</blockquote>
+<p><font color="red">Are you serious?</font></p>
+<blockquote>
+<h2 id="_3">下载速度问题</h2>
+</blockquote>
+<h3 id="git">git</h3>
+<ul>
+<li>
+<p>可使用代理站：<code>https://ghproxy.com/</code></p>
+</li>
+<li>
+<p>使用示例：<code>git clone https://ghproxy.com/github.com/SAGIRI-kawaii/sagiri-bot.git</code></p>
+</li>
+</ul>
+<h3 id="pip">pip</h3>
+<ul>
+<li>
+<p>可使用国内镜像源如清华园、豆瓣源等</p>
+</li>
+<li>
+<p>使用示例：<code>pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple</code></p>
+</li>
+</ul>
+<blockquote>
+<h2 id="_4">代理相关</h2>
+</blockquote>
+<p>由于某些原因，此文档中不会涉及到代理的搭建、部署、使用等教程，请自行寻找教程</p>
 
               
             </article>
