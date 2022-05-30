@@ -47,17 +47,13 @@ async def abbreviated_prediction(app: Ariadne, group: Group, message: MessageCha
     result = "可能的结果:\n\n"
     has_result = False
     for i in res:
-        if "trans" in i:
-            if i["trans"]:
-                has_result = True
-                result += f"{i['name']} => {'，'.join(i['trans'])}\n\n"
-            else:
-                result += f"{i['name']} => 没找到结果！\n\n"
+        if "trans" in i and i["trans"]:
+            has_result = True
+            result += f"{i['name']} => {'，'.join(i['trans'])}\n\n"
+        elif "trans" in i or not i["inputting"]:
+            result += f"{i['name']} => 没找到结果！\n\n"
         else:
-            if i["inputting"]:
-                has_result = True
-                result += f"{i['name']} => {'，'.join(i['inputting'])}\n\n"
-            else:
-                result += f"{i['name']} => 没找到结果！\n\n"
+            has_result = True
+            result += f"{i['name']} => {'，'.join(i['inputting'])}\n\n"
     result = result if has_result else "没有找到结果哦~"
     await app.sendGroupMessage(group, MessageChain(result), quote=message.getFirst(Source))
